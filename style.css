@@ -7,6 +7,9 @@
 body {
   background-color: #2c2c2c;
 }
+ul {
+  list-style: none;
+}
 .conteiner {
   max-width: 120rem;
   margin: 0 auto;
@@ -63,7 +66,7 @@ body {
 #wrapper label {
   position: absolute;
   /* left: 50%; */
-  bottom: -3.125rem;
+  bottom: 0.875rem;
   left: 96%;
   z-index: 100;
   width: 1.1rem;
@@ -98,7 +101,6 @@ body {
 }
 
 #wrapper label[for="radio-btn-1"] {
-  /* margin-left: -40px; */
   margin-left: -3.75rem;
 }
 #wrapper label[for="radio-btn-2"] {
@@ -120,9 +122,63 @@ body {
 #wrapper #radio-btn-4:checked ~ #slider > ul {
   left: -300%;
 }
+.text {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+#texts {
+  margin-top: 1.875rem;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
 
-@media (max-width: 62.5rem) {
+#texts > ul {
+  list-style: none;
+  height: 100%;
+  width: 500%;
+  overflow: hidden;
+  position: relative;
+  left: 0rem;
+  transition: left 0.5s;
+}
+#texts > ul > li {
+  width: 20%;
+  float: left;
+  position: relative;
+}
+#texts > ul > li p {
+  padding: 0.625rem;
+}
+
+#texts > ul > li > img {
+  margin: auto;
+  width: 100%;
+}
+#wrapper #radio-btn-1:checked ~ #texts > ul {
+  left: 0;
+}
+#wrapper #radio-btn-2:checked ~ #texts > ul {
+  left: -100%;
+}
+#wrapper #radio-btn-3:checked ~ #texts > ul {
+  left: -200%;
+}
+#wrapper #radio-btn-4:checked ~ #texts > ul {
+  left: -300%;
+}
+
+@media (max-width: 37.5rem) {
   #wrapper label {
     left: 50%;
+    bottom: 4.5rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+  #texts {
+    margin-top: 3.875rem;
   }
 }
