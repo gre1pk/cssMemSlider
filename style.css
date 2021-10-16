@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2c2c2c;
+}
+ul {
+  list-style: none;
+}
+.conteiner {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.875rem;
+}
+
+#wrapper {
+  display: block;
+  margin-bottom: 1.125rem;
+  max-width: 61.25rem;
+  min-height: 6.25rem;
+  margin: auto;
+  position: relative;
+}
+
+#slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3%;
+  box-shadow: 1.0625rem 0.6875rem 1.25rem -0.6875rem #0a0a0a;
+}
+
+#slider > ul {
+  list-style: none;
+  height: 100%;
+  width: 500%;
+  overflow: hidden;
+  position: relative;
+  left: 0rem;
+  transition: left 0.5s;
+}
+#slider > ul > li {
+  width: 20%;
+  float: left;
+  position: relative;
+}
+#slider > ul > li p {
+  padding: 0.625rem;
+}
+
+#slider > ul > li > img {
+  margin: auto;
+  width: 100%;
+}
+#wrapper input[type="radio"] {
+  position: absolute;
+  left: 50%;
+  bottom: 0.9375rem;
+  z-index: 100;
+  visibility: hidden;
+}
+#wrapper label {
+  position: absolute;
+  /* left: 50%; */
+  bottom: 0.875rem;
+  left: 96%;
+  z-index: 100;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #497fc5;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid #497fc5;
+}
+#wrapper label:hover {
+  background: #ffffff;
+}
+#wrapper label:active {
+  background: #ffffff;
+}
+#wrapper #radio-btn-1:checked ~ label[for="radio-btn-1"] {
+  background: none;
+  border: 0.0625rem solid #497fc5;
+}
+#wrapper #radio-btn-2:checked ~ label[for="radio-btn-2"] {
+  background: none;
+  border: 0.0625rem solid #497fc5;
+}
+#wrapper #radio-btn-3:checked ~ label[for="radio-btn-3"] {
+  background: none;
+  border: 0.0625rem solid #497fc5;
+}
+#wrapper #radio-btn-4:checked ~ label[for="radio-btn-4"] {
+  background: none;
+  border: 0.0625rem solid #497fc5;
+}
+
+#wrapper label[for="radio-btn-1"] {
+  margin-left: -3.75rem;
+}
+#wrapper label[for="radio-btn-2"] {
+  margin-left: -1.875rem;
+}
+#wrapper label[for="radio-btn-4"] {
+  margin-left: 1.875rem;
+}
+
+#wrapper #radio-btn-1:checked ~ #slider > ul {
+  left: 0;
+}
+#wrapper #radio-btn-2:checked ~ #slider > ul {
+  left: -100%;
+}
+#wrapper #radio-btn-3:checked ~ #slider > ul {
+  left: -200%;
+}
+#wrapper #radio-btn-4:checked ~ #slider > ul {
+  left: -300%;
+}
+.text {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+#texts {
+  margin-top: 1.875rem;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#texts > ul {
+  list-style: none;
+  height: 100%;
+  width: 500%;
+  overflow: hidden;
+  position: relative;
+  left: 0rem;
+  transition: left 0.5s;
+}
+#texts > ul > li {
+  width: 20%;
+  float: left;
+  position: relative;
+}
+#texts > ul > li p {
+  padding: 0.625rem;
+}
+
+#texts > ul > li > img {
+  margin: auto;
+  width: 100%;
+}
+#wrapper #radio-btn-1:checked ~ #texts > ul {
+  left: 0;
+}
+#wrapper #radio-btn-2:checked ~ #texts > ul {
+  left: -100%;
+}
+#wrapper #radio-btn-3:checked ~ #texts > ul {
+  left: -200%;
+}
+#wrapper #radio-btn-4:checked ~ #texts > ul {
+  left: -300%;
+}
+
+@media (max-width: 37.5rem) {
+  #wrapper label {
+    left: 50%;
+    bottom: 4.5rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+  #texts {
+    margin-top: 3.875rem;
+  }
+}
